@@ -22,6 +22,8 @@ import rosegraphics as rg
 
 def main():
     hypotenuse(3,4)
+    yeet('magenta',100)
+    yeet('lime',8)
     """
     TESTS the functions that you will write below.
     You write the tests per the _TODO_s below.
@@ -47,7 +49,7 @@ def hypotenuse(a,b):
     print(c)
 
 ###############################################################################
-# TODO: 4a.  Define a function immediately below this _TODO_.
+# DONE: 4a.  Define a function immediately below this _TODO_.
 #   It takes two arguments:
 #     -- a string that represents a color (e.g. 'red')
 #     -- a positive integer that represents the thickness of a Pen.
@@ -69,14 +71,22 @@ def hypotenuse(a,b):
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 4b.  In main, CALL your function at least TWICE (with different values
+# DONE: 4b.  In main, CALL your function at least TWICE (with different values
 #   for the arguments) to test whether you defined the function correctly.
 #
 ###############################################################################
-
+def yeet(color, thiccc):
+    window = rg.TurtleWindow()
+    turt1 = rg.SimpleTurtle()
+    turt1.pen = rg.Pen('green', thiccc)
+    turt2 = rg.SimpleTurtle()
+    turt2.pen = rg.Pen(color, 5)
+    turt1.forward(100)
+    turt2.backward(100)
+    window.close_on_mouse_click()
 
 ###############################################################################
-# TODO: 5.
+# DONE: 5.
 #   COMMIT-and-PUSH your work (after changing this TO-DO to DONE).
 #
 #   As a reminder, here is how you should do so:
